@@ -21,6 +21,7 @@ public class Board extends AppCompatActivity implements View.OnClickListener {
     protected int str, num;
     protected ImageButton[][] btn;
     protected int turn;
+    protected boolean ok = true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
