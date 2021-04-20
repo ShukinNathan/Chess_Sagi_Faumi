@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Chess_Sagi_Faumi</string>
+    <string name="title_activity_dead_units">dead_units</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
 </resources>

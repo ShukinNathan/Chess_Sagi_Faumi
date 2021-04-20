@@ -15,6 +15,7 @@ import android.widget.TextView;
 public class singleplayer extends Board implements View.OnClickListener {
     private TextView textview;
     private View view;
+    private String name;
 
 
     @Override
@@ -24,8 +25,8 @@ public class singleplayer extends Board implements View.OnClickListener {
         this.textview = (TextView)findViewById(R.id.singleplayer_view);
         Intent i = getIntent();
         Bundle b = i.getExtras();
-        this.textview.setText((String) b.get("Text"));
-        createBoard();
+        this.name = (String) b.get("name") + "VS computer";
+        this.textview.setText(this.name);
     }
 
     @Override

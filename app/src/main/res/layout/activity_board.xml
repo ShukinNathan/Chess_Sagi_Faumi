@@ -7,6 +7,26 @@
     android:background="@drawable/background"
     tools:context=".Board">
 
+    <ScrollView
+        android:id="@+id/deadScroll"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.526">
+
+        <LinearLayout
+            android:id="@+id/deadLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerHorizontal="true">
+        </LinearLayout>
+    </ScrollView>
+
     <androidx.gridlayout.widget.GridLayout
         android:id="@+id/board_layout"
         android:layout_width="403dp"
@@ -19,6 +39,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.448">
+
 
         <ImageButton
             android:id="@+id/a1"
@@ -531,7 +552,6 @@
             android:background="@android:color/holo_green_dark"
             app:layout_column="7"
             app:layout_row="0" />
-
 
     </androidx.gridlayout.widget.GridLayout>
 

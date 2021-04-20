@@ -21,17 +21,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view){
-//        Intent intent = new Intent(MainActivity.this, name_getter.class);
-//        switch(view.getId()){
-//            case R.id.choose_multiplayer:
-//                intent.putExtra("multi", true);
-//                startActivity(intent);
-//                break;
-//            default:
-//                intent.putExtra("multi", false);
-//                startActivity(intent);
-//                break;
-//        }
+        Intent intent = new Intent(MainActivity.this, name_getter.class);
+        switch(view.getId()){
+            case R.id.choose_multiplayer:
+                intent.putExtra("multi", true);
+                startActivity(intent);
+                break;
+            default:
+                intent.putExtra("multi", false);
+                startActivity(intent);
+                break;
+        }
         startActivity(new Intent(MainActivity.this, Board.class));
     }
 }

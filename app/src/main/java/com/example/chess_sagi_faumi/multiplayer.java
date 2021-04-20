@@ -10,10 +10,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class multiplayer extends Board implements View.OnClickListener {
-    private String str;
+    private String str, name1, name2;
     private TextView textView;
     private Intent name_getter;
-    int turn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,9 +21,10 @@ public class multiplayer extends Board implements View.OnClickListener {
         Intent i = getIntent();
         Bundle b = i.getExtras();
         this.textView = (TextView)findViewById(R.id.multiplayer_title);
-        this.str =(String) b.get("Text");
+        this.name1 = (String) b.get("name1");
+        this.name2 = (String) b.get("name2");
+        this.str = this.name1 + " vs " + this.name2;
         this.textView.setText(this.str);
-        this.turn = 1;
     }
 
     @Override

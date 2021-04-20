@@ -40,23 +40,24 @@ public class name_getter extends AppCompatActivity implements View.OnClickListen
 
     @Override
     public void onClick(View view) {
+        Intent intent = new Intent(name_getter.this, multiplayer.class);
         if(multi){
             if(ok){
                 this.name1 = this.edittext.getText();
                 this.edittext.setText("second player name");
                 this.ok = false;
+                intent.putExtra("name1", this.name1);
             }
             else{
                 this.text = this.name1 + " VS " + this.edittext.getText();
-                Intent intent = new Intent(name_getter.this, multiplayer.class);
-                intent.putExtra("Text", this.text);
+                intent.putExtra("name2", this.name1);
                 startActivity(intent);
             }
         }
         else {
-            this.text = this.edittext.getText() + " VS computer";
-            Intent intent = new Intent(name_getter.this, singleplayer.class);
-            intent.putExtra("Text", this.text);
+            this.name1 = this.edittext.getText();
+            this.name1 = this.name1;
+            intent.putExtra("name", this.name1);
             startActivity(intent);
         }
     }
